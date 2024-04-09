@@ -1,0 +1,185 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "cozy-block/product-carousel",
+  "title": "Product Grid/Carousel",
+  "description": "Engage your audience with our 'Product Grid/Carousel' block, offering a visually appealing and interactive way to display WooCommerce products in a carousel format for an enhanced browsing experience.",
+  "category": "cozy-block",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "cover": {
+      "type": "string",
+      "default": ""
+    },
+    "blockClientId": {
+      "type": "string",
+      "default": ""
+    },
+    "namespace": {
+      "type": "string",
+      "default": ""
+    },
+    "currencySymbol": {
+      "type": "string",
+      "default": ""
+    },
+    "currencyPosition": {
+      "type": "string",
+      "default": ""
+    },
+    "quickView": {
+      "type": "boolean",
+      "default": false
+    },
+    "layout": {
+      "type": "string",
+      "default": "grid"
+    },
+    "template": {
+      "type": "string",
+      "default": "default"
+    },
+    "buttonHoverColor": {
+      "type": "object",
+      "default": {
+        "background": "#5566ca",
+        "text": "#fff"
+      }
+    },
+    "productGroup": {
+      "type": "string",
+      "default": "latest"
+    },
+    "productCategory": {
+      "type": "array",
+      "default": []
+    },
+    "imageScale": {
+      "type": "boolean",
+      "default": true
+    },
+    "saleBadge": {
+      "type": "object",
+      "default": {
+        "enabled": true,
+        "display": "flex",
+        "position": "right",
+        "top": 10,
+        "right": 10,
+        "left": 0,
+        "marginBottom": 0,
+        "gap": 0,
+        "labelBefore": "",
+        "contentType": "default",
+        "labelAfter": "",
+        "padding": {
+          "top": 10,
+          "right": 6,
+          "bottom": 10,
+          "left": 6
+        },
+        "borderType": "none",
+        "borderWidth": 1,
+        "borderColor": "#000",
+        "borderRadius": 50,
+        "rotate": 0,
+        "bgColor": "#5566ca",
+        "typography": {
+          "fontFamily": "sans-serif",
+          "fontSize": 10,
+          "color": "#fff",
+          "fontWeight": 400
+        },
+        "labelTypography": {
+          "fontFamily": "sans-serif",
+          "fontSize": 10,
+          "color": "",
+          "fontWeight": 400
+        }
+      }
+    },
+    "hoverShow": {
+      "type": "boolean",
+      "default": true
+    },
+    "gridOptions": {
+      "type": "object",
+      "default": {
+        "displayColumn": 3,
+        "columnGap": 30
+      }
+    },
+    "pagination": {
+      "type": "object",
+      "default": {
+        "enabled": true,
+        "width": 10,
+        "height": 10,
+        "borderRadius": 10,
+        "activeWidth": 10,
+        "activeBorderRadius": 10,
+        "activeColor": "#007cba",
+        "color": "#252525",
+        "activeColorHover": "#164861",
+        "colorHover": "#a5a5a5",
+        "verticalPosition": 0
+      }
+    },
+    "navigation": {
+      "type": "object",
+      "default": {
+        "enabled": true,
+        "iconSize": 15,
+        "iconBoxWidth": 35,
+        "iconBoxHeight": 35,
+        "borderRadius": 50,
+        "backgroundColor": "#fff",
+        "color": "#007cba",
+        "backgroundColorHover": "#007cba",
+        "colorHover": "#fff"
+      }
+    },
+    "sliderOptions": {
+      "type": "object",
+      "default": {
+        "loop": false,
+        "autoplay": {
+          "status": true,
+          "pauseOnMouseEnter": true,
+          "delay": 2500
+        },
+        "centeredSlides": false,
+        "slidesPerView": 3,
+        "spaceBetween": 30,
+        "speed": 700
+      }
+    },
+    "reviewStyles": {
+      "type": "object",
+      "default": {
+        "fontSize": 14,
+        "color": ""
+      }
+    }
+  },
+  "editorScript": [
+    "cozy-block--product-carousel"
+  ],
+  "editorStyle": [
+    "cozy-block--product-carousel--editor-style"
+  ],
+  "viewScript": [
+    "cozy-block-scripts"
+  ],
+  "script": [
+    "cozy-swiper-bundle"
+  ],
+  "style": [
+    "cozy-block--product-carousel--style",
+    "cozy-swiper-bundle"
+  ],
+  "render": "file:./render.php"
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "cozy-block/trending-post",
+  "title": "Trending Post (Premium)",
+  "description": "Stay ahead with our 'Trending Post' block, spotlighting the most popular and engaging content on your site for a dynamic and up-to-the-minute user experience.",
+  "category": "cozy-block",
+  "example": {},
+  "icon": "<svg width=\"25\" height=\"20\" viewBox=\"0 0 25 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect fill=\"white\" x=\"0.5\" y=\"0.5\" width=\"24\" height=\"19\" rx=\"2.5\" stroke=\"#5566CA\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.5 15H4.5V14H20.5V15Z\" fill=\"#B2BCF9\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17.5 17H7.5V16H17.5V17Z\" fill=\"#B2BCF9\"/><path d=\"M10.0873 6.60885L6.63725 10.0036C6.23474 10.5128 5.77847 10.9716 6.11974 11.5313C6.46474 12.0971 7.03976 12.0971 7.44226 11.8142L10.7773 8.53256L12.0999 10.5128C12.6979 11.3276 13.4224 10.8523 13.7099 10.5128L17.16 7.06149C17.068 7.9215 17.735 8.24966 18.08 8.30624C18.816 8.26098 19 7.64615 19 7.34439V4.85488C19 4.0854 18.31 3.96847 17.965 4.00619H15.6074C14.9174 4.00619 14.7066 4.57199 14.6874 4.85488C14.6414 5.71489 15.4349 5.85446 15.8374 5.81674L12.9624 8.64572L11.7549 6.60885C11.1568 5.88463 10.394 6.30709 10.0873 6.60885Z\" fill=\"#36CFC6\"/></svg>",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "cover": {
+      "type": "string",
+      "default": ""
+    },
+    "blockClientId": {
+      "type": "string",
+      "default": ""
+    },
+    "layout": {
+      "type": "string",
+      "default": "list"
+    },
+    "hoverShow": {
+      "type": "boolean",
+      "default": false
+    },
+    "carouselOptions": {
+      "type": "object",
+      "default": {
+        "height": 200,
+        "navigation": {
+          "enabled": true,
+          "verticalGap": 0,
+          "horizontalGap": 60,
+          "iconSize": 15,
+          "iconBoxWidth": 35,
+          "iconBoxHeight": 35,
+          "borderRadius": 50,
+          "backgroundColor": "#fff",
+          "color": "#007cba",
+          "backgroundColorHover": "#007cba",
+          "colorHover": "#fff"
+        },
+        "sliderOptions": {
+          "loop": false,
+          "autoplay": false,
+          "slidesPerView": 1,
+          "spaceBetween": 30,
+          "speed": 700
+        }
+      }
+    }
+  },
+  "editorScript": "cozy-block--trending-post",
+  "editorStyle": "cozy-block--trending-post--editor-style",
+  "viewScript": [
+    "cozy-block-scripts"
+  ],
+  "script": [
+    "cozy-swiper-bundle"
+  ],
+  "style": [
+    "cozy-block--trending-post--style",
+    "cozy-swiper-bundle"
+  ],
+  "render": "file:./render.php"
+}

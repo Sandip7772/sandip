@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "cozy-block/related-post",
+  "title": "Related Post (Premium)",
+  "description": "Uncover additional relevant content using our 'Related Post' block, offering curated suggestions tailored to your interests for an engaging exploration of aligned topics.",
+  "category": "cozy-block",
+  "example": {},
+  "icon": "<svg width='26' height='23' viewBox='0 0 26 23' fill='none' xmlns='http://www.w3.org/2000/svg'><rect fill='white' x='0.5' y='0.5' width='25' height='21.8571' rx='2.5' stroke='#5566CA'/><rect x='3.05882' y='3.2653' width='6.11765' height='8.70748' rx='0.5' fill='#B2BCF9'/><path d='M7.26338 7.07483L8.25676 9.52381H6.27L7.26338 7.07483Z' fill='#96A2EA'/><path d='M5.7353 5.44217L7.39093 9.5238H4.07966L5.7353 5.44217Z' fill='#7689F6'/><path fill-rule='evenodd' clip-rule='evenodd' d='M9.17647 14.1497H3.05882V13.0612H9.17647V14.1497Z' fill='#B2BCF9'/><path fill-rule='evenodd' clip-rule='evenodd' d='M7.64706 16.3265H3.05882V15.2381H7.64706V16.3265Z' fill='#B2BCF9'/><path fill-rule='evenodd' clip-rule='evenodd' d='M6.11765 18.5034H3.05882V17.415H6.11765V18.5034Z' fill='#B2BCF9'/><rect x='9.94118' y='3.2653' width='6.11765' height='8.70748' rx='0.5' fill='#B2BCF9'/><path d='M14.1457 7.07483L15.1391 9.52381H13.1523L14.1457 7.07483Z' fill='#96A2EA'/><path d='M12.6176 5.44217L14.2733 9.5238H10.962L12.6176 5.44217Z' fill='#7689F6'/><path fill-rule='evenodd' clip-rule='evenodd' d='M16.0588 14.1497H9.94118V13.0612H16.0588V14.1497Z' fill='#B2BCF9'/><path fill-rule='evenodd' clip-rule='evenodd' d='M14.5294 16.3265H9.94118V15.2381H14.5294V16.3265Z' fill='#B2BCF9'/><path fill-rule='evenodd' clip-rule='evenodd' d='M13 18.5034H9.94118V17.415H13V18.5034Z' fill='#B2BCF9'/><rect x='16.8235' y='3.2653' width='6.11765' height='8.70748' rx='0.5' fill='#B2BCF9'/><path d='M21.0281 7.07483L22.0215 9.52381H20.0347L21.0281 7.07483Z' fill='#96A2EA'/><path d='M19.5 5.44217L21.1556 9.5238H17.8444L19.5 5.44217Z' fill='#7689F6'/><path fill-rule='evenodd' clip-rule='evenodd' d='M22.9412 14.1497H16.8235V13.0612H22.9412V14.1497Z' fill='#B2BCF9'/><path fill-rule='evenodd' clip-rule='evenodd' d='M21.4118 16.3265H16.8235V15.2381H21.4118V16.3265Z' fill='#B2BCF9'/><path fill-rule='evenodd' clip-rule='evenodd' d='M19.8824 18.5034H16.8235V17.415H19.8824V18.5034Z' fill='#B2BCF9'/></svg>",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "cover": {
+      "type": "string",
+      "default": ""
+    },
+    "blockClientId": {
+      "type": "string",
+      "default": ""
+    },
+    "gridOptions": {
+      "type": "object",
+      "default": {
+        "displayColumn": 3,
+        "columnGap": 30
+      }
+    }
+  },
+  "editorScript": [
+    "cozy-block--related-post"
+  ],
+  "editorStyle": "cozy-block--related-post--editor-style",
+  "viewScript": [
+    "cozy-block-scripts"
+  ],
+  "style": [
+    "cozy-block--related-post--style"
+  ],
+  "render": "file:./render.php"
+}

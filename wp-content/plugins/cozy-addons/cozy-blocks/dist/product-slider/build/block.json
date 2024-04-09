@@ -1,0 +1,88 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "cozy-block/product-slider",
+  "title": "Product Slider (Premium)",
+  "description": "Highlight your WooCommerce products dynamically with the 'Product Slider' block, allowing smooth sliding to showcase your products in an attractive and interactive manner.",
+  "category": "cozy-block",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "cover": {
+      "type": "string",
+      "default": ""
+    },
+    "blockClientId": {
+      "type": "string",
+      "default": ""
+    },
+    "hoverShow": {
+      "type": "boolean",
+      "default": true
+    },
+    "pagination": {
+      "type": "object",
+      "default": {
+        "enabled": true,
+        "width": 10,
+        "height": 10,
+        "borderRadius": 10,
+        "activeWidth": 10,
+        "activeBorderRadius": 10,
+        "activeColor": "#007cba",
+        "color": "#252525",
+        "activeColorHover": "#164861",
+        "colorHover": "#a5a5a5",
+        "verticalPosition": 0
+      }
+    },
+    "navigation": {
+      "type": "object",
+      "default": {
+        "enabled": true,
+        "iconSize": 15,
+        "iconBoxWidth": 35,
+        "iconBoxHeight": 35,
+        "borderRadius": 50,
+        "backgroundColor": "#fff",
+        "color": "#007cba",
+        "backgroundColorHover": "#007cba",
+        "colorHover": "#fff"
+      }
+    },
+    "sliderOptions": {
+      "type": "object",
+      "default": {
+        "loop": false,
+        "autoplay": {
+          "status": true,
+          "pauseOnMouseEnter": true,
+          "delay": 2500
+        },
+        "centeredSlides": false,
+        "slidesPerView": 1,
+        "spaceBetween": 30,
+        "speed": 700
+      }
+    }
+  },
+  "editorScript": [
+    "cozy-block--product-slider"
+  ],
+  "editorStyle": [
+    "cozy-block--product-slider--editor-style"
+  ],
+  "viewScript": [
+    "cozy-block-scripts"
+  ],
+  "script": [
+    "cozy-swiper-bundle"
+  ],
+  "style": [
+    "cozy-block--product-slider--style",
+    "cozy-swiper-bundle"
+  ],
+  "render": "file:./render.php"
+}

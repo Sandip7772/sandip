@@ -1,0 +1,419 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "cozy-block/portfolio-gallery",
+  "title": "Portfolio Gallery",
+  "description": "Showcase your work with finesse using the 'Portfolio Gallery' block, designed for creating advanced and visually stunning layouts to present your portfolio in a captivating manner.",
+  "category": "cozy-block",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "cover": {
+      "type": "string",
+      "default": ""
+    },
+    "blockClientId": {
+      "type": "string",
+      "default": ""
+    },
+    "namespace": {
+      "type": "string",
+      "default": "cozy-block/portfolio-gallery"
+    },
+    "source": {
+      "type": "string",
+      "default": "default"
+    },
+    "orderBy": {
+      "type": "string",
+      "default": "dateDESC"
+    },
+    "layout": {
+      "type": "string",
+      "default": "grid"
+    },
+    "perPage": {
+      "type": "string",
+      "default": "-1"
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "portfolioTemplates": {
+      "type": "array",
+      "default": []
+    },
+    "portfolioTax": {
+      "type": "array",
+      "default": []
+    },
+    "portfolioCat": {
+      "type": "array",
+      "default": []
+    },
+    "imageHoverEffect": {
+      "type": "boolean",
+      "default": true
+    },
+    "featuredImage": {
+      "type": "object",
+      "default": {
+        "width": "",
+        "height": "",
+        "marginTop": 10,
+        "marginBottom": 10,
+        "overlayColor": "#323131",
+        "opacity": 0.5,
+        "position": "before"
+      }
+    },
+    "layoutType": {
+      "type": "string",
+      "default": "default"
+    },
+    "galleryOptions": {
+      "type": "object",
+      "default": {
+        "iconSize": 16,
+        "iconViewBox": {
+          "vx": 0,
+          "vy": 0,
+          "vw": 20,
+          "vh": 10
+        },
+        "iconPath": "M15.1109 1.11091C15.5014 0.720385 16.1346 0.720385 16.5251 1.11091L19.7071 4.29289C20.0976 4.68341 20.0976 5.31658 19.7071 5.7071L16.5251 8.88908C16.1346 9.27961 15.5014 9.27961 15.1109 8.88908C14.7204 8.49856 14.7204 7.86539 15.1109 7.47487L16.5858 6H0.5V4H16.5858L15.1109 2.52512C14.7204 2.1346 14.7204 1.50143 15.1109 1.11091Z",
+        "marginBottom": 10,
+        "iconBoxSize": 30,
+        "iconBoxBorderRadius": 50,
+        "iconBoxBgColor": "#5566ca",
+        "iconBoxBgColorHover": "#36cfc6",
+        "iconColor": "#fff",
+        "titleColor": "#fff"
+      }
+    },
+    "titlePosition": {
+      "type": "string",
+      "default": "bottom left"
+    },
+    "titleMargin": {
+      "type": "object",
+      "default": {
+        "top": 20,
+        "right": 20,
+        "bottom": 20,
+        "left": 20
+      }
+    },
+    "gridOptions": {
+      "type": "object",
+      "default": {
+        "displayColumn": 3,
+        "columnGap": 30,
+        "isotopeFilter": false,
+        "masonryEnabled": false
+      }
+    },
+    "hoverShow": {
+      "type": "boolean",
+      "default": true
+    },
+    "pagination": {
+      "type": "object",
+      "default": {
+        "enabled": true,
+        "width": 10,
+        "height": 10,
+        "borderRadius": 10,
+        "activeWidth": 10,
+        "activeBorderRadius": 10,
+        "activeColor": "#007cba",
+        "color": "#252525",
+        "activeColorHover": "#164861",
+        "colorHover": "#a5a5a5",
+        "verticalPosition": 0
+      }
+    },
+    "navigation": {
+      "type": "object",
+      "default": {
+        "enabled": true,
+        "iconSize": 15,
+        "iconBoxWidth": 35,
+        "iconBoxHeight": 35,
+        "borderRadius": 50,
+        "backgroundColor": "#fff",
+        "color": "#007cba",
+        "backgroundColorHover": "#007cba",
+        "colorHover": "#fff"
+      }
+    },
+    "sliderOptions": {
+      "type": "object",
+      "default": {
+        "loop": false,
+        "autoplay": {
+          "status": true,
+          "pauseOnMouseEnter": true,
+          "delay": 2500
+        },
+        "centeredSlides": false,
+        "slidesPerView": 3,
+        "spaceBetween": 30,
+        "speed": 700
+      }
+    },
+    "searchBar": {
+      "type": "object",
+      "default": {
+        "enabled": false,
+        "position": "after",
+        "padding": {
+          "top": 5,
+          "right": 5,
+          "bottom": 5,
+          "left": 5
+        },
+        "border": {
+          "width": 1,
+          "style": "solid",
+          "color": "#e2e2e2"
+        },
+        "borderFocus": {
+          "width": 1,
+          "style": "solid",
+          "color": "#5566ca"
+        },
+        "borderRadius": 10,
+        "color": "#000",
+        "bgColor": "#fff",
+        "bgColorFocus": ""
+      }
+    },
+    "searchIcon": {
+      "type": "object",
+      "default": {
+        "top": 14,
+        "right": 5
+      }
+    },
+    "ajaxButton": {
+      "type": "object",
+      "default": {
+        "enabled": true,
+        "label": "Load More",
+        "contentLoad": 10,
+        "marginTop": 10,
+        "padding": {
+          "top": 10,
+          "right": 10,
+          "bottom": 10,
+          "left": 10
+        },
+        "border": {
+          "width": 1,
+          "type": "none",
+          "color": "#000",
+          "colorHover": ""
+        },
+        "borderRadius": 10,
+        "fontSize": 14,
+        "fontWeight": 400,
+        "fontFamily": "sans-serif",
+        "bgColor": "#5566ca",
+        "bgColorHover": "",
+        "color": "#fff",
+        "colorHover": ""
+      }
+    },
+    "popup": {
+      "type": "object",
+      "default": {
+        "enabled": true,
+        "dimension": "default",
+        "width": 600,
+        "height": "",
+        "responsiveWidth": 768,
+        "padding": {
+          "top": 25,
+          "right": 25,
+          "bottom": 25,
+          "left": 25
+        },
+        "bgColor": "#fff",
+        "catBgColor": "#5566ca",
+        "catColor": "#fff",
+        "overlayWrapper": "#363636",
+        "top": 0,
+        "left": 100
+      }
+    },
+    "portfolioCPT": {
+      "type": "object",
+      "default": {
+        "margin": {
+          "top": 10,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "padding": {
+          "top": 10,
+          "right": 10,
+          "bottom": 10,
+          "left": 10
+        },
+        "borderRadius": {
+          "top": 10,
+          "right": 10,
+          "bottom": 10,
+          "left": 10
+        },
+        "border": {
+          "type": "none",
+          "color": "#000",
+          "top": 1,
+          "right": 1,
+          "bottom": 1,
+          "left": 1
+        },
+        "boxShadow": {
+          "enabled": false,
+          "color": "#000",
+          "horizontal": 0,
+          "vertical": 0,
+          "blur": 10,
+          "spread": 0,
+          "position": ""
+        },
+        "bgColor": "#5566ca",
+        "subtitleColor": "#fff",
+        "color": "#fff"
+      }
+    },
+    "portfolioIcon": {
+      "type": "object",
+      "default": {
+        "view": "default",
+        "layout": "fill",
+        "size": 10,
+        "color": "#5566ca"
+      }
+    },
+    "iconBoxStyles": {
+      "type": "object",
+      "default": {
+        "padding": {
+          "top": 5,
+          "right": 5,
+          "bottom": 5,
+          "left": 5
+        },
+        "borderType": "none",
+        "borderWidth": 1,
+        "borderColor": "#000",
+        "borderColorHover": "",
+        "borderRadius": 50,
+        "bgColor": "#b2bcf9",
+        "bgColorHover": ""
+      }
+    },
+    "isotopeStyles": {
+      "type": "object",
+      "default": {
+        "spacing": 10,
+        "marginBottom": 10,
+        "padding": {
+          "top": 5,
+          "right": 5,
+          "bottom": 5,
+          "left": 5
+        },
+        "textAlign": "center",
+        "borderRadius": 10,
+        "border": {
+          "width": 1,
+          "style": "none",
+          "color": "#000"
+        },
+        "borderActive": {
+          "width": 1,
+          "style": "none",
+          "color": "#000"
+        },
+        "boxShadow": {
+          "enabled": false,
+          "color": "#000",
+          "horizontal": 0,
+          "vertical": 0,
+          "blur": 10,
+          "spread": 0,
+          "position": ""
+        },
+        "boxShadowActive": {
+          "enabled": false,
+          "color": "#000",
+          "horizontal": 0,
+          "vertical": 0,
+          "blur": 10,
+          "spread": 0,
+          "position": ""
+        },
+        "bgColor": "#fff",
+        "bgColorActive": "#5566ca",
+        "fontFamily": "sans-serif",
+        "fontWeight": 400,
+        "fontSize": 12,
+        "color": "#000",
+        "colorActive": "#fff"
+      }
+    },
+    "titleTypography": {
+      "type": "object",
+      "default": {
+        "fontFamily": "sans-serif",
+        "fontSize": 22,
+        "color": "#000",
+        "colorHover": "#5566ca",
+        "fontWeight": 600
+      }
+    },
+    "subtitleTypography": {
+      "type": "object",
+      "default": {
+        "fontFamily": "sans-serif",
+        "fontSize": 16,
+        "color": "#000",
+        "fontWeight": 500
+      }
+    },
+    "typography": {
+      "type": "object",
+      "default": {
+        "fontFamily": "sans-serif",
+        "fontSize": 14,
+        "color": "#000",
+        "fontWeight": 400
+      }
+    }
+  },
+  "editorScript": [
+    "cozy-block--portfolio-gallery"
+  ],
+  "editorStyle": [
+    "cozy-block--portfolio-gallery--editor-style"
+  ],
+  "viewScript": [
+    "cozy-block-scripts"
+  ],
+  "script": [
+    "cozy-swiper-bundle"
+  ],
+  "style": [
+    "cozy-block--portfolio-gallery--style",
+    "cozy-swiper-bundle"
+  ],
+  "render": "file:./render.php"
+}

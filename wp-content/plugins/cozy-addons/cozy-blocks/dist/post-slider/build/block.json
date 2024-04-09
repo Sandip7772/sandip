@@ -1,0 +1,85 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "cozy-block/post-slider",
+  "title": "Post Slider (Premium)",
+  "description": "Discover an interactive showcase of content through our 'Post Slider' feature, presenting a visually captivating carousel of posts for an engaging and dynamic browsing experience.",
+  "category": "cozy-block",
+  "example": {},
+  "icon": "<svg width='26' height='19' viewBox='0 0 26 19' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M4.50817 2C4.50817 1.17157 5.17974 0.5 6.00817 0.5H20.0082C20.8366 0.5 21.5082 1.17157 21.5082 2V17C21.5082 17.8284 20.8366 18.5 20.0082 18.5H6.00817C5.17974 18.5 4.50817 17.8284 4.50817 17V2ZM6.00817 1.5C5.73203 1.5 5.50817 1.72386 5.50817 2V17C5.50817 17.2761 5.73203 17.5 6.00817 17.5H20.0082C20.2843 17.5 20.5082 17.2761 20.5082 17V2C20.5082 1.72386 20.2843 1.5 20.0082 1.5H6.00817Z' fill='#5566CA'/><path fill-rule='evenodd' clip-rule='evenodd' d='M17.0078 13H9.00781V12H17.0078V13Z' fill='#B2BCF9'/><path fill-rule='evenodd' clip-rule='evenodd' d='M19.0078 10.2C19.0078 10.6418 18.6496 11 18.2078 11H7.80781C7.36598 11 7.00781 10.6418 7.00781 10.2V4.8C7.00781 4.35817 7.36598 4 7.80781 4H18.2078C18.6496 4 19.0078 4.35817 19.0078 4.8V10.2Z' fill='#B2BCF9'/><path d='M14 6L16 9H12L14 6Z' fill='#96A2EA'/><path d='M11.5 5L14 9H9L11.5 5Z' fill='#7689F6'/><path fill-rule='evenodd' clip-rule='evenodd' d='M16.0078 15H10.0078V14H16.0078V15Z' fill='#B2BCF9'/><path d='M25.8869 9.84757L23.7625 11.9719C23.6157 12.1187 23.3783 12.1187 23.233 11.9719L22.88 11.6189C22.7332 11.4721 22.7332 11.2346 22.88 11.0894L24.3858 9.58359L22.88 8.07781C22.7332 7.93098 22.7332 7.69356 22.88 7.54829L23.2315 7.19215C23.3783 7.04532 23.6157 7.04532 23.761 7.19215L25.8853 9.31649C26.0337 9.46332 26.0337 9.70074 25.8869 9.84757Z' fill='#36CFC6'/><path d='M0.117738 9.76554L2.24207 11.8899C2.3889 12.0367 2.62633 12.0367 2.7716 11.8899L3.12461 11.5369C3.27144 11.39 3.27144 11.1526 3.12461 11.0073L1.61883 9.50156L3.12461 7.99578C3.27144 7.84895 3.27144 7.61153 3.12461 7.46626L2.77316 7.11012C2.62633 6.96329 2.3889 6.96329 2.24364 7.11012L0.119301 9.23446C-0.0290906 9.38129 -0.0290906 9.61871 0.117738 9.76554Z' fill='#36CFC6'/></svg>",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "cover": {
+      "type": "string",
+      "default": ""
+    },
+    "blockClientId": {
+      "type": "string",
+      "default": ""
+    },
+    "hoverShow": {
+      "type": "boolean",
+      "default": true
+    },
+    "carouselOptions": {
+      "type": "object",
+      "default": {
+        "pagination": {
+          "enabled": true,
+          "width": 10,
+          "height": 10,
+          "borderRadius": 10,
+          "activeWidth": 10,
+          "activeBorderRadius": 10,
+          "activeColor": "#007cba",
+          "color": "#252525",
+          "activeColorHover": "#164861",
+          "colorHover": "#a5a5a5",
+          "positionVertical": 5
+        },
+        "navigation": {
+          "enabled": true,
+          "iconSize": 15,
+          "iconBoxWidth": 35,
+          "iconBoxHeight": 35,
+          "borderRadius": 50,
+          "backgroundColor": "#fff",
+          "color": "#007cba",
+          "backgroundColorHover": "#007cba",
+          "colorHover": "#fff"
+        },
+        "sliderOptions": {
+          "loop": false,
+          "autoplay": {
+            "enabled": true,
+            "pauseOnMouseEnter": true,
+            "delay": 2500
+          },
+          "centeredSlides": false,
+          "slidesPerView": 1,
+          "spaceBetween": 30,
+          "speed": 700
+        }
+      }
+    }
+  },
+  "editorScript": [
+    "cozy-block--post-slider"
+  ],
+  "editorStyle": [
+    "cozy-block--post-slider--editor-style"
+  ],
+  "viewScript": [
+    "cozy-block-scripts"
+  ],
+  "script": [
+    "cozy-swiper-bundle"
+  ],
+  "style": [
+    "cozy-block--post-slider--style",
+    "cozy-swiper-bundle"
+  ],
+  "render": "file:./render.php"
+}

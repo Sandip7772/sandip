@@ -1,0 +1,71 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "cozy-block/news-ticker",
+  "title": "News Ticker (Premium)",
+  "description": "Stay informed with our 'News Ticker' block, delivering real-time headlines in a scrolling format for an engaging and dynamic user experience.",
+  "category": "cozy-block",
+  "example": {},
+  "icon": "<svg width='25' height='20' viewBox='0 0 25 20' fill='none' xmlns='http://www.w3.org/2000/svg'><rect fill='white' x='0.5' y='0.5' width='24' height='19' rx='2.5' stroke='#5566CA'/><path d='M14.6251 5.8125H12.822L13.4876 3.53086C13.5501 3.26367 13.3704 3 13.1251 3H10.8752C10.6877 3 10.5283 3.15645 10.5033 3.36562L10.0033 7.58437C9.9736 7.8375 10.1486 8.0625 10.3752 8.0625H12.2298L11.5095 11.4814C11.4533 11.7486 11.6345 12 11.8736 12C12.0048 12 12.1298 11.9227 12.1986 11.7891L14.9485 6.44531C15.0939 6.16582 14.9142 5.8125 14.6251 5.8125Z' fill='#36CFC6'/><rect x='5' y='14' width='15' height='1' fill='#B2BCF9'/><path d='M7 16H18V17H7V16Z' fill='#B2BCF9'/></svg>",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "cover": {
+      "type": "string",
+      "default": ""
+    },
+    "blockClientId": {
+      "type": "string",
+      "default": ""
+    },
+    "hoverShow": {
+      "type": "boolean",
+      "default": false
+    },
+    "height": {
+      "type": "number",
+      "default": 200
+    },
+    "carouselOptions": {
+      "type": "object",
+      "default": {
+        "navigation": {
+          "enabled": true,
+          "verticalGap": 0,
+          "horizontalGap": 60,
+          "iconSize": 15,
+          "iconBoxWidth": 35,
+          "iconBoxHeight": 35,
+          "borderRadius": 50,
+          "backgroundColor": "#fff",
+          "color": "#007cba",
+          "backgroundColorHover": "#007cba",
+          "colorHover": "#fff"
+        },
+        "sliderOptions": {
+          "loop": false,
+          "autoplay": false,
+          "slidesPerView": 1,
+          "spaceBetween": 30,
+          "speed": 700
+        }
+      }
+    }
+  },
+  "editorScript": [
+    "cozy-block--news-ticker"
+  ],
+  "editorStyle": "cozy-block--news-ticker--editor-style",
+  "viewScript": [
+    "cozy-block-scripts"
+  ],
+  "script": [
+    "cozy-swiper-bundle"
+  ],
+  "style": [
+    "cozy-block--news-ticker--style",
+    "cozy-swiper-bundle"
+  ],
+  "render": "file:./render.php"
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "cozy-block/product-tab",
+  "title": "Products Showcase Tabs (Pro)",
+  "description": "Effortlessly organize and present your WooCommerce products with our 'Products Showcase Tabs' block. Explore a user-friendly approach to displaying items in categorized tabs, enhancing navigation and optimizing the shopping experience for your visitors.",
+  "category": "cozy-block",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "cover": {
+      "type": "string",
+      "default": ""
+    },
+    "blockClientId": {
+      "type": "string",
+      "default": ""
+    },
+    "namespace": {
+      "type": "string",
+      "default": "cozy-block/product-tab"
+    },
+    "enableTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "title": {
+      "type": "string",
+      "default": "Products Showcase"
+    },
+    "typography": {
+      "type": "object",
+      "default": {
+        "fontFamily": "sans-serif",
+        "fontSize": 16,
+        "color": "#000",
+        "fontWeight": 400
+      }
+    }
+  },
+  "editorScript": [
+    "cozy-block--product-tab"
+  ],
+  "editorStyle": [
+    "cozy-block--product-tab--editor-style"
+  ],
+  "viewScript": [
+    "cozy-block-scripts"
+  ],
+  "script": [
+    "cozy-swiper-bundle"
+  ],
+  "style": [
+    "cozy-block--product-tab--style",
+    "cozy-swiper-bundle"
+  ],
+  "render": "file:./render.php"
+}

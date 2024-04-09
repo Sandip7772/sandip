@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cozy-block/slide",
+  "version": "1.0.0",
+  "title": "Slide",
+  "description": "Support block for the slider block.",
+  "category": "cozy-block",
+  "textdomain": "cozy-block",
+  "attributes": {
+    "blockClientId": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "parent": [
+    "cozy-block/slider"
+  ],
+  "editorScript": [
+    "cozy-block--slide"
+  ],
+  "style": "file:./style-index.css"
+}
