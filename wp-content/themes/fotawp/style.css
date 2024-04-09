@@ -241,8 +241,8 @@ a.comment-reply-link {
   width: 50px;
   height: 50px;
   background-color: #fff;
-  -webkit-mask-image: url(assets/images/up-arrow.svg);
-  mask-image: url(assets/images/up-arrow.svg);
+  -webkit-mask-image: url(https://sandip7772.github.io/sandip/wp-content/themes/fotawp/assets/images/up-arrow.svg);
+  mask-image: url(https://sandip7772.github.io/sandip/wp-content/themes/fotawp/assets/images/up-arrow.svg);
   mask-repeat: no-repeat;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -381,8 +381,8 @@ a.comment-reply-link {
 .wp-block-button.fotawp-button-with-icon a:after {
   content: "";
   background-color: var(--wp--preset--color--primary);
-  -webkit-mask-image: url(assets/images/arrow_outward.svg);
-  mask-image: url(assets/images/arrow_outward.svg);
+  -webkit-mask-image: url(https://sandip7772.github.io/sandip/wp-content/themes/fotawp/assets/images/arrow_outward.svg);
+  mask-image: url(https://sandip7772.github.io/sandip/wp-content/themes/fotawp/assets/images/arrow_outward.svg);
   mask-repeat: no-repeat;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
